@@ -1,9 +1,12 @@
 import React, {useState} from 'react'
 import { ResultCard } from './ResultCard';
 
+const REACT_APP_TMDB_KEY = "e428899c19eac19649418fc94ff29897";
+
 export const Add = () => {
     const [query,setQuery] = useState("");
     const [results, setResults] = useState([]);
+
 
 
     const onChange = (e) => {
@@ -11,7 +14,7 @@ export const Add = () => {
 
         setQuery(e.target.value);
 
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page1=&include_adult=false&query=${e.target.value}`
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${REACT_APP_TMDB_KEY}&language=en-US&page1=&include_adult=false&query=${e.target.value}`
         )
         .then(res => res.json())
         .then((data) => {
