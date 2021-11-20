@@ -1,3 +1,7 @@
+**#Before Starting**
+add .env.local to the folder
+copy and paste REACT_APP_TMDB_KEY=e428899c19eac19649418fc94ff29897
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
